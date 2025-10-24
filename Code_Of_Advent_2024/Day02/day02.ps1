@@ -19,14 +19,14 @@ function Is-Safe {
     return $increasing -or $decreasing
 }
 
-# read input file 
-$input = Get-Content -Path H:\Dokumente\Scripts\Powershell\CoA\Input.txt
+# read file 
+$input = Get-Content -Path "H:\Dokumente\GIT\CoA_2024\Code_Of_Advent_2024\Day02\Input.txt"
 
-# Count save reports
+# solution1
 $count = 0
-
 foreach ($line in $input) {
     if (Is-Safe($line -split ' ' | ForEach-Object { [int]$_ })) { $count++ }
 }
-
 Write-Host "Solution 1: $count"
+
+# solution2
