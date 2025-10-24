@@ -29,4 +29,4 @@ foreach ($line in $input) {
     if (Is-Safe($line -split ' ' | ForEach-Object { [int]$_ })) { $count++ }
 }
 
-Write-Host "Solution: $count"
+Write-Host "Solution 1: $count"
